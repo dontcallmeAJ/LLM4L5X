@@ -1,0 +1,782 @@
+:root {
+    /* Light Mode: Predominantly white with black/grey text and elements */
+    --bg-light: #ffffff; /* Pure white background */
+    --text-dark: #1a1a1a; /* Very dark grey/near black text */
+    --header-bg-light: #ffffff; /* White header */
+    --h1-color-light: #333333; /* Dark grey for H1 */
+    --toggle-theme-color: #666666; /* Medium grey for icons */
+    --toggle-theme-hover: #000000; /* Black on hover */
+    --chat-window-bg: #ffffff; /* White chat window */
+    --scrollbar-thumb-light: #cccccc; /* Light grey scrollbar thumb */
+    --scrollbar-track-light: #ffffff; /* White scrollbar track */
+
+    /* Chat Messages */
+    --chat-bot-bg: #f5f5f5; /* Very light grey for bot messages */
+    --chat-bot-text: #1a1a1a; /* Dark text for bot messages */
+    --chat-user-bg: #e0e0e0; /* Slightly darker grey for user messages */
+    --chat-user-text: #1a1a1a; /* Dark text for user messages */
+
+    /* Code Blocks */
+    --code-style-bg: #f0f0f0; /* Light grey for code background */
+    --code-style-text: #333333; /* Dark grey code text */
+    --code-style-border: #dddddd; /* Lighter grey code border */
+
+    --duration-color: #888888; /* Medium grey for duration text */
+
+    /* Save/Copy Buttons (within code blocks) */
+    --save-btn-bg: #ffffff; /* White button */
+    --save-btn-text: #333333; /* Dark text */
+    --save-btn-hover-bg: #eeeeee; /* Light grey hover */
+    --save-btn-hover-text: #1a1a1a; /* Darker text on hover */
+
+    --loading-text-color: #666666; /* Medium grey for loading text */
+
+    /* Input Box */
+    --inputbox-bg: #ffffff; /* White input background */
+    --inputbox-color: #1a1a1a; /* Dark text in input */
+    --inputbox-border: #cccccc; /* Light grey border */
+    --inputbox-shadow: 0 0 4px rgba(0, 0, 0, 0.1); /* Very subtle shadow */
+    --inputbox-focus-shadow: 0 0 6px rgba(0, 0, 0, 0.2); /* Slightly more visible on focus */
+
+    /* Attach/Enter Buttons */
+    --attach-enter-btn-bg: #ffffff; /* White button */
+    --attach-enter-btn-color: #333333; /* Dark text */
+    --attach-enter-btn-hover-bg: #eeeeee; /* Light grey hover */
+    --attach-enter-btn-hover-color: #1a1a1a; /* Darker text on hover */
+
+    --footer-color: #888888; /* Medium grey for footer */
+
+    /* Modal Styles (also kept minimal) */
+    --modal-overlay-bg: rgba(0, 0, 0, 0.6); /* Darker overlay */
+    --modal-content-bg: #ffffff; /* White modal content */
+    --modal-content-text: #1a1a1a; /* Dark text */
+    --modal-button-bg: #f0f0f0; /* Light grey button */
+    --modal-button-text: #333333; /* Dark text */
+    --modal-button-hover-bg: #dddddd; /* Slightly darker grey hover */
+    --modal-primary-button-bg: #e0e0e0; /* Light gray for the button background (white-gray) */
+    --modal-primary-button-text: #1a1a1a; /* Dark text for contrast on light gray */
+    --modal-primary-button-hover-bg: #4CAF50; /* Dark Green highlight on hover */
+    --modal-primary-button-hover-text: #ffffff; /* White text on dark green hover */
+    --modal-input-border: #cccccc; /* Light grey input border */
+    --modal-input-bg: #f9f9f9; /* Off-white input background */
+    --modal-input-text: #1a1a1a; /* Dark text */
+
+    /* Status Messages (kept their functional colors, but can be desaturated if preferred) */
+    --modal-status-success: #28a745; /* Green */
+    --modal-status-error: #dc3545; /* Red */
+    --modal-status-info: #007bff; /* Blue */
+}
+
+body.dark-mode {
+    /* Dark Mode: Predominantly black with white/light grey text and elements */
+    --bg-light: #1a1a1a; /* Near black background */
+    --text-dark: #eeeeee; /* Very light grey text */
+    --header-bg-light: #1a1a1a; /* Near black header */
+    --h1-color-light: #cccccc; /* Light grey for H1 */
+    --toggle-theme-color: #bbbbbb; /* Lighter grey for icons */
+    --toggle-theme-hover: #ffffff; /* White on hover */
+    --chat-window-bg: #1a1a1a; /* Near black chat window */
+    --scrollbar-thumb-light: #666666; /* Dark grey scrollbar thumb */
+    --scrollbar-track-light: #1a1a1a; /* Near black scrollbar track */
+
+    /* Chat Messages */
+    --chat-bot-bg: #2b2b2b; /* Dark grey for bot messages */
+    --chat-bot-text: #eeeeee; /* Light text for bot messages */
+    --chat-user-bg: #444444; /* Slightly lighter dark grey for user messages */
+    --chat-user-text: #eeeeee; /* Light text for user messages */
+
+    /* Code Blocks */
+    --code-style-bg: #000000; /* Pure black for code background */
+    --code-style-text: #cccccc; /* Light grey code text */
+    --code-style-border: #333333; /* Darker grey code border */
+
+    --duration-color: #bbbbbb; /* Light grey for duration text */
+
+    /* Save/Copy Buttons (within code blocks) */
+    --save-btn-bg: #333333; /* Dark grey button */
+    --save-btn-text: #cccccc; /* Light text */
+    --save-btn-hover-bg: #666666; /* Darker grey hover */
+    --save-btn-hover-text: #ffffff; /* White text on hover */
+
+    --loading-text-color: #bbbbbb; /* Light grey for loading text */
+
+    /* Input Box */
+    --inputbox-bg: #2b2b2b; /* Dark grey input background */
+    --inputbox-color: #eeeeee; /* Light text in input */
+    --inputbox-border: #444444; /* Darker grey border */
+    --inputbox-shadow: 0 0 4px rgba(255, 255, 255, 0.1); /* Subtle white shadow */
+    --inputbox-focus-shadow: 0 0 6px rgba(255, 255, 255, 0.2); /* Slightly more visible on focus */
+
+    /* Attach/Enter Buttons */
+    --attach-enter-btn-bg: #2b2b2b; /* Dark grey button */
+    --attach-enter-btn-color: #cccccc; /* Light text */
+    --attach-enter-btn-hover-bg: #444444; /* Darker grey hover */
+    --attach-enter-btn-hover-color: #ffffff; /* White text on hover */
+
+    --footer-color: #bbbbbb; /* Light grey for footer */
+
+    /* Modal Styles */
+    --modal-overlay-bg: rgba(0, 0, 0, 0.8); /* Darker overlay */
+    --modal-content-bg: #2b2b2b; /* Dark grey modal content */
+    --modal-content-text: #eeeeee; /* Light text */
+    --modal-button-bg: #444444; /* Dark grey button */
+    --modal-button-text: #eeeeee; /* Light text */
+    --modal-button-hover-bg: #666666; /* Darker grey hover */
+    --modal-primary-button-bg: #444444; /* Dark gray for the button background */
+    --modal-primary-button-text: #eeeeee; /* Light text for contrast on dark gray */
+    --modal-primary-button-hover-bg: #8BC34A; /* Light Green highlight on hover */
+    --modal-primary-button-hover-text: #1a1a1a; /* Dark text on light green hover */
+    --modal-input-border: #555555; /* Dark grey input border */
+    --modal-input-bg: #3a3a3a; /* Slightly lighter dark grey input background */
+    --modal-input-text: #eeeeee; /* Light text */
+
+    /* Status Messages (functional colors might clash, consider desaturating more or using icons) */
+    --modal-status-success: #5cb85c; /* Slightly muted green */
+    --modal-status-error: #d9534f; /* Slightly muted red */
+    --modal-status-info: #5bc0de; /* Slightly muted blue */
+}
+
+/* Base Styles - No changes needed here, as they use variables */
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: system-ui, sans-serif;
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: background-color .3s, color .3s;
+    overflow: hidden; /* Prevents scrollbars on main body */
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: .5rem 1rem;
+    background-color: var(--header-bg-light);
+    z-index: 10;
+    box-sizing: border-box;
+    transition: background-color .3s;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* Subtle shadow remains */
+}
+
+h1 {
+    font-size: .8rem;
+    color: var(--h1-color-light);
+    margin: 0;
+    transition: color .3s;
+}
+
+#toggleTheme, #settingsButton {
+    margin-left: .5rem;
+    cursor: pointer;
+    background: transparent;
+    border: 0;
+    font-size: 1.2rem;
+    color: var(--toggle-theme-color);
+    padding: .25rem .5rem;
+    border-radius: 6px;
+    transition: color .3s, background-color .2s;
+}
+
+#toggleTheme {
+    margin-left: auto; /* Pushes it to the far right */
+}
+
+#toggleTheme:hover, #settingsButton:hover {
+    color: var(--toggle-theme-hover);
+    background-color: rgba(0, 0, 0, 0.05); /* Subtle hover background for light mode */
+}
+
+body.dark-mode #toggleTheme:hover, body.dark-mode #settingsButton:hover {
+    background-color: rgba(255, 255, 255, 0.05); /* Subtle hover background for dark mode */
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    max-width: 1600px;
+    padding: 0 1rem;
+    margin-top: 40px; /* Space for fixed header */
+    height: calc(100vh - 80px); /* Adjust height for header and footer */
+    box-sizing: border-box;
+}
+
+@media(max-width: 768px) {
+    #container {
+        width: 95%;
+        padding: 0 .5rem;
+    }
+}
+
+#chatWindow {
+    flex-grow: 1;
+    overflow-y: auto;
+    background: var(--chat-window-bg);
+    border-radius: 8px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    scroll-behavior: smooth;
+    margin-bottom: 12px;
+    box-sizing: border-box;
+    max-height: 75vh; /* Max height for chat window */
+    transition: background-color .3s;
+    scrollbar-width: thin; /* Firefox */
+    scrollbar-color: var(--scrollbar-thumb-light) var(--chat-window-bg); /* Firefox */
+}
+
+/* Webkit scrollbar styles */
+#chatWindow::-webkit-scrollbar {
+    width: 10px;
+}
+
+#chatWindow::-webkit-scrollbar-thumb {
+    background-color: var(--scrollbar-thumb-light);
+    border-radius: 10px;
+}
+
+#chatWindow::-webkit-scrollbar-track {
+    background: var(--scrollbar-track-light);
+}
+
+@media(max-width: 768px) {
+    #chatWindow {
+        max-height: 60vh;
+    }
+}
+
+.chat-message {
+    font-size: .85rem;
+    padding: .75rem 1rem;
+    border-radius: 6px;
+    word-wrap: break-word;
+    box-sizing: border-box;
+    transition: background-color .3s, color .3s;
+}
+
+.chat-message.bot {
+    align-self: flex-start;
+    background-color: var(--chat-bot-bg);
+    color: var(--chat-bot-text);
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    position: relative;
+}
+
+.chat-message.user {
+    align-self: flex-end;
+    background-color: var(--chat-user-bg);
+    color: var(--chat-user-text);
+    max-width: 90%;
+}
+
+.code-style {
+    background-color: var(--code-style-bg);
+    font-family: monospace;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid var(--code-style-border);
+    white-space: pre-wrap; /* Preserve whitespace and line breaks */
+    word-wrap: break-word; /* Break long words */
+    user-select: text;
+    transition: background-color .3s, color .3s, border-color .3s;
+}
+
+.duration {
+    font-style: italic;
+    font-size: .9em;
+    color: var(--duration-color);
+    user-select: none;
+    transition: color .3s;
+}
+
+.btn-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 6px;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 5px;
+    gap: 8px;
+}
+
+.btn-actions {
+    display: flex;
+    gap: 8px;
+}
+
+.save-btn {
+    background-color: var(--save-btn-bg);
+    color: var(--save-btn-text);
+    padding: 5px 12px;
+    border: 0;
+    border-radius: 6px;
+    cursor: pointer;
+    user-select: none;
+    font-size: .7rem;
+    transition: background-color .3s, color .3s;
+    white-space: nowrap; /* Prevent text wrapping */
+}
+
+.save-btn:hover {
+    background-color: var(--save-btn-hover-bg);
+    color: var(--save-btn-hover-text);
+}
+
+.save-btn.processing {
+    font-style: italic;
+    opacity: .6;
+    cursor: default;
+}
+
+.loading-text {
+    font-style: italic;
+    font-weight: 600;
+    user-select: none;
+    font-size: .9em;
+    color: var(--loading-text-color);
+    transition: color .3s;
+}
+
+/* New CSS for animated dots */
+.loading-dot {
+    animation: blink-animation 1s infinite;
+}
+
+.loading-dot:nth-child(1) {
+    animation-delay: 0s; /* Start immediately */
+}
+
+.loading-dot:nth-child(2) {
+    animation-delay: 0.2s; /* Delay for second dot */
+}
+
+.loading-dot:nth-child(3) {
+    animation-delay: 0.4s; /* Delay for third dot */
+}
+
+@keyframes blink-animation {
+    0%, 100% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+}
+
+#inputWrapper {
+    width: 100%;
+    padding: 12px 0 20px;
+    box-sizing: border-box;
+    background: inherit; /* Inherit background for seamless look */
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.input-row {
+    display: flex;
+    align-items: flex-end;
+    gap: 8px;
+    width: 100%;
+}
+
+.input-with-buttons {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+#inputBox {
+    flex-grow: 1;
+    min-height: 40px;
+    max-height: 150px;
+    resize: vertical;
+    padding-left: 80px; /* Space for attach button */
+    padding-right: 70px; /* Space for enter button */
+    font-size: .9rem;
+    border-radius: 6px;
+    border: 1px solid var(--inputbox-border);
+    box-shadow: var(--inputbox-shadow);
+    color: var(--inputbox-color);
+    background: var(--inputbox-bg);
+    font-family: inherit;
+    box-sizing: border-box;
+    overflow-y: auto; /* Allow scrolling for long text */
+    transition: background-color .3s, color .3s, border-color .3s, box-shadow .3s;
+    scrollbar-width: thin; /* Firefox */
+    scrollbar-color: var(--scrollbar-thumb-light) var(--inputbox-bg); /* Firefox */
+}
+
+#inputBox:focus {
+    outline: 0;
+    border-color: var(--inputbox-border); /* Keep border consistent on focus */
+    box-shadow: var(--inputbox-focus-shadow);
+}
+
+/* Webkit scrollbar for inputBox */
+#inputBox::-webkit-scrollbar {
+    width: 10px;
+    height: 10px; /* For horizontal scroll if needed */
+}
+
+#inputBox::-webkit-scrollbar-thumb {
+    background-color: var(--scrollbar-thumb-light);
+    border-radius: 10px;
+    border: 2px solid var(--inputbox-bg); /* Creates a margin around the thumb */
+}
+
+#inputBox::-webkit-scrollbar-track {
+    background: var(--inputbox-bg);
+    border-radius: 10px;
+}
+
+#attachButton {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 4px 10px;
+    font-size: .85rem;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: var(--attach-enter-btn-bg);
+    border: 0;
+    color: var(--attach-enter-btn-color);
+    transition: background-color .3s, color .3s;
+    z-index: 1; /* Ensure button is above input box */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 25px; /* Fixed height for consistent button size */
+    white-space: nowrap;
+}
+
+#attachButton:hover, #attachButton:focus {
+    background-color: var(--attach-enter-btn-hover-bg);
+    color: var(--attach-enter-btn-hover-color);
+    outline: 0; /* Remove default focus outline */
+}
+
+#attachButton:disabled {
+    opacity: .5;
+    cursor: not-allowed;
+}
+
+#fileInput {
+    display: none; /* Hide native file input */
+}
+
+#enterButton {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    height: 25px; /* Match attach button height */
+    transform: translateY(-50%);
+    padding: 4px 12px;
+    font-size: .85rem;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: var(--attach-enter-btn-bg);
+    border: 0;
+    color: var(--attach-enter-btn-color);
+    transition: background-color .3s, color .3s;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+}
+
+#enterButton:hover, #enterButton:focus {
+    background-color: var(--attach-enter-btn-hover-bg);
+    color: var(--attach-enter-btn-hover-color);
+    outline: 0;
+}
+
+#enterButton:disabled {
+    opacity: .5;
+    cursor: not-allowed;
+}
+
+footer {
+    font-size: .7rem;
+    text-align: center;
+    color: var(--footer-color);
+    padding: 10px 0;
+    font-style: italic;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Modal Styles */
+.modal {
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: var(--modal-overlay-bg);
+    display: flex; /* Use flex for centering */
+    justify-content: center;
+    align-items: center;
+    visibility: hidden; /* Use visibility for smooth show/hide */
+    opacity: 0;
+    transition: visibility 0s, opacity 0.3s ease;
+}
+
+.modal.show {
+    visibility: visible;
+    opacity: 1;
+}
+
+.modal-content {
+    background-color: var(--modal-content-bg);
+    margin: auto; /* For browsers that don't fully support flex centering for modals */
+    padding: 25px 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 500px;
+    position: relative;
+    color: var(--modal-content-text);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    box-sizing: border-box;
+    transform: translateY(-20px); /* Start slightly above center */
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.modal.show .modal-content {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.modal-content h2 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: var(--modal-content-text);
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.modal-description {
+    font-size: .85rem;
+    color: var(--modal-content-text);
+    text-align: center;
+    margin-bottom: 10px;
+    line-height: 1.4;
+}
+
+.close-button {
+    color: var(--modal-content-text);
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color .2s;
+}
+
+.close-button:hover, .close-button:focus {
+    color: #999;
+}
+
+.modal-input-group {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    width: 100%;
+}
+
+#ragFileNameDisplay {
+    flex-grow: 1;
+    padding: 8px 12px;
+    border: 1px solid var(--modal-input-border);
+    border-radius: 5px;
+    background-color: var(--modal-input-bg);
+    color: var(--modal-input-text);
+    font-size: .9rem;
+    user-select: text;
+}
+
+.modal-button {
+    padding: 8px 15px;
+    border: 0;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: .9rem;
+    transition: background-color .2s, color .2s;
+    background-color: var(--modal-button-bg);
+    color: var(--modal-button-text);
+}
+
+.modal-button:hover:not(:disabled) {
+    background-color: var(--modal-button-hover-bg);
+}
+
+.modal-button:disabled {
+    opacity: .6;
+    cursor: not-allowed;
+}
+
+.modal-button.primary-button {
+    background-color: var(--modal-primary-button-bg);
+    color: var(--modal-primary-button-text);
+}
+
+.modal-button.primary-button:hover:not(:disabled) {
+    background-color: var(--modal-primary-button-hover-bg);
+}
+
+.modal-status-message {
+    font-size: .8rem;
+    text-align: center;
+    min-height: 1.2em; /* Ensure consistent height */
+}
+
+.modal-status-message.success {
+    color: var(--modal-status-success);
+}
+
+.modal-status-message.error {
+    color: var(--modal-status-error);
+}
+
+.modal-status-message.info {
+    color: var(--modal-status-info);
+}
+
+.chat-options-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 10px;
+    justify-content: flex-start;
+}
+
+.chat-option-box {
+    background-color: var(--code-style-bg);
+    border: 1px solid var(--code-style-border);
+    color: var(--code-style-text);
+    padding: 12px 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color .2s, border-color .2s, box-shadow .2s;
+    font-size: .9em;
+    font-weight: 500;
+    user-select: none;
+    flex-shrink: 0; /* Prevent shrinking when space is limited */
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.chat-option-box:hover {
+    background-color: var(--save-btn-hover-bg);
+    color: var(--save-btn-hover-text);
+    border-color: var(--save-btn-hover-bg);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.chat-option-box.selected {
+    background-color: var(--modal-primary-button-bg); /* Use primary button color */
+    color: var(--modal-primary-button-text); /* Use primary button text color */
+    border-color: var(--modal-primary-button-hover-bg);
+    cursor: default;
+}
+
+.chat-option-box.disabled {
+    opacity: .6;
+    cursor: not-allowed;
+    background-color: var(--code-style-bg); /* Revert background for disabled */
+    color: var(--code-style-text); /* Revert text color for disabled */
+}
+
+/* Styles for the confirmation buttons (Optimize/Manual Command) */
+.confirmation-options {
+    margin-top: 15px; /* More space above buttons */
+    display: flex;
+    gap: 12px; /* Slightly more space between buttons */
+    justify-content: flex-start;
+    padding: 10px 0; /* Add some vertical padding within the container */
+    flex-wrap: wrap; /* Allow buttons to wrap if too many */
+    border-top: 1px solid rgba(0, 0, 0, 0.08); /* A subtle separator */
+    transition: border-top-color 0.3s; /* Smooth transition for dark mode border */
+}
+
+body.dark-mode .confirmation-options {
+    border-top: 1px solid rgba(255, 255, 255, 0.15); /* Adjust separator for dark mode */
+}
+
+.confirmation-options button.action-button {
+    padding: 10px 20px; /* Increased padding */
+    border: none; /* No explicit border, rely on background and shadow */
+    border-radius: 25px; /* Pill shape */
+    background-color: var(--modal-primary-button-bg); /* Use primary button color from vars */
+    color: var(--modal-primary-button-text); /* Use primary button text color from vars */
+    cursor: pointer;
+    font-size: 1em; /* Slightly larger font */
+    font-weight: 600; /* Bolder text */
+    transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease, color 0.2s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* More prominent shadow */
+    text-transform: uppercase; /* Make button text uppercase for emphasis */
+    letter-spacing: 0.5px; /* Add some letter spacing */
+    min-width: 120px; /* Ensure buttons have a minimum width */
+    text-align: center;
+}
+
+.confirmation-options button.action-button:hover:not(:disabled) {
+    background-color: var(--modal-primary-button-hover-bg); /* Use primary button hover color from vars */
+    transform: translateY(-2px); /* Slight lift effect on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Larger shadow on hover */
+}
+
+.confirmation-options button.action-button:active:not(:disabled) {
+    transform: translateY(0); /* Press down effect */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Smaller shadow on active */
+}
+
+.confirmation-options button.action-button:disabled {
+    cursor: not-allowed;
+    opacity: 0.5; /* More faded appearance */
+    background-color: var(--modal-button-bg); /* Use general modal button bg for disabled */
+    color: var(--modal-button-text); /* Use general modal button text for disabled */
+    box-shadow: none; /* No shadow when disabled */
+}
+
+/* Dark mode specific adjustments for action buttons */
+body.dark-mode .confirmation-options button.action-button {
+    /* These variables are already defined in dark-mode section of :root, ensuring black/white theme */
+    background-color: var(--modal-primary-button-bg); 
+    color: var(--modal-primary-button-text);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); /* Darker shadow for dark mode */
+}
+
+body.dark-mode .confirmation-options button.action-button:hover:not(:disabled) {
+    background-color: var(--modal-primary-button-hover-bg);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+}
+
+body.dark-mode .confirmation-options button.action-button:disabled {
+    background-color: var(--modal-button-bg); 
+    color: var(--modal-button-text);
+}

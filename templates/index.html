@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ICS_SLM</title>
+    <link rel="stylesheet" href="static/style.css" />
+    <link rel="icon" href="static/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <div class="header">
+        <h1>ICS_SLM</h1>
+        <button id="toggleTheme" title="Toggle Dark/Light Mode">🌓</button>
+        <button id="settingsButton" title="Settings">⚙️</button>
+    </div>
+
+    <main id="container">
+        <div id="chatWindow"></div>
+
+        <div id="inputWrapper">
+            <div class="input-row">
+                <div class="input-with-buttons">
+                    <button id="attachButton" title="Attach file">Attach</button>
+                    <textarea id="inputBox" placeholder="Type your question..."></textarea>
+                    <button id="enterButton" title="Send message" disabled>Enter</button>
+                </div>
+            </div>
+            <input type="file" id="fileInput" accept=".xlsx,.l5x" style="display: none;"/>
+        </div>
+
+        <!-- Settings Modal Structure -->
+        <div id="settingsModal" class="modal">
+            <div class="modal-content">
+                <span class="close-button">&times;</span>
+                <h2>Upload Coding STD Document</h2>
+                <p class="modal-description"> Upload an Excel (.xlsx) file to update the document. This will replace the existing document.</p>
+                <div class="modal-input-group">
+                    <input type="text" id="ragFileNameDisplay" placeholder="No file selected" readonly />
+                    <input type="file" id="ragFileInput" accept=".xlsx" style="display: none;" />
+                    <button id="browseRagFileButton" class="modal-button">Browse</button>
+                </div>
+                <button id="uploadRagFileButton" class="modal-button primary-button" disabled>Upload Document</button>
+                <p id="ragUploadStatus" class="modal-status-message"></p>
+            </div>
+        </div>
+    </main>
+
+    <footer>@2025 ICS_SLM CSG</footer>
+
+    <script src="static/script.js"></script>
+</body>
+</html>

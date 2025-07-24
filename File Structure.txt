@@ -1,0 +1,78 @@
+V00 Package Notes – ICS_SLM_project
+===================================
+ICS_SLM_project/
+├───────────────────────────────────────────────────────────────────────────<<<<< [Frontend] >>>>>───────────────────────────────────────────────────────────────────────────│
+│
+├── static/
+│	│
+│   	├── script.js---------------------------- # JavaScript for basic UI interaction
+│   	└── style.css---------------------------- # CSS for styling the UI
+│
+├── templates/
+│	│
+│   	├── base.html---------------------------- # Base HTML layout (header, footer, etc.)
+│   	└── index.html--------------------------- # Main page content
+│
+├── uploads/------------------------------------- # Directory to store uploaded documents
+│
+├── app.py--------------------------------------- # Flask server to route frontend/backend
+│
+├───────────────────────────────────────────────────────────────────────────<<<<< [Backend] >>>>>────────────────────────────────────────────────────────────────────────────│
+│
+├── model_IntentionAnalyzer.py----------------------------------------- # Core NLP agent; routes user input to appropriate processing
+│   	 │
+│  	 ├── Chat_ProcessSingleInput.py-------------------------------- # Orchestrates IL code generation from user input
+│ 	 │	 │ 
+│        │	 ├── model_ILCodeGen.py-------------------------------- # Interacts with phi4-mini (HuggingFace or Ollama)
+│	 │	 │	  │
+│        │	 │   	  └── model_ILCodeGen_system_prompt.txt-------- # System prompt for IL code generation
+│        │	 │
+│        │	 ├── Chat_SanitizeModelOutput.py----------------------- # Cleans and formats raw model output
+│        │	 │
+│        │	 ├── Validator_ParseModelResponse.py------------------- # Parses model response and initiates validations
+│	 │	 │	      │
+│      	 │	 │   	      ├── Validator_ProcessParsedResponse.py--- # Processes parsed model response
+│        │	 │   	      └── Validator_InstructionDetection.py---- # Contains rule engine (keywords, syntax check)
+│        │	 │
+│        │	 └── Validator_Reprompt.py----------------------------- # Re-prompts model if validation fails
+│	 │
+│	 └── model_UDTGen.py------------------------------------------- # takes in user instructions and returns structured UDT fields as a Python list of dicts
+│		  │ 
+│		  └── L5XGen_UDT.py
+│
+├── Attach_L5XAnalyzer.py------------------------ # Analyzes attached L5x and select the respective routing in app.py
+│	  │
+│	  └── L5XGen_UDT.py
+│
+│
+├── Attach_ProcessExcel.py----------------------- # Processes attached excel for routine generation
+│
+│
+├────────────────────────────────────────────────────────────────<<<<< [Used by both Chat & Attach operation]>>>>>──────────────────────────────────────────────────────────│
+│
+├── L5XGen_Rung.py------------------------------- # Converts IL code into rung L5X export file; invokes tag generation
+├── L5XGen_Routine.py---------------------------- # Converts IL code into routine L5X export file; invokes tag generation
+├── L5XGen_AOI.py*------------------------------- # Converts IL code into AOI L5X export file; invokes tag generation
+├── L5XGen_UDT.py-------------------------------- # Converts IL code into UDT L5X export file; invokes tag generation
+├── L5XGen_Tag.py-------------------------------- # Generates required global tags for use in L5X routines
+│
+├── L5XOpt_UDT.py-------------------------------- # Parses and Optimizes (Datatype and Tag sorting) attached UDT L5X file
+│
+├────────────────────────────────────────────────────────────────────────────<<<<< [MISC] >>>>>─────────────────────────────────────────────────────────────────────────────│
+│
+├── Sample_ILinSeries_23_v2.py.py--------------- # Question and IL Code generator - Support Compounding of 23 Instruction set in same rung (Serial)
+│	
+├── Sample_ILinParallel_23_v1.py----------------- # Question and IL Code generator - Support Compounding of 23 Instruction set in same rung (Parallel/Branching)
+│
+└───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────│
+
+AJ TODO:
+- AOI_Generator.py
+- PGM_Verify.py
+
+Support for Branching, UDT, AOI
+Support for User uploading Routine, UDT, AOI - L5x files
+Support for User Standard Blocks through RAG
+Support for UDT reorder
+Support for Standardization Check
+
